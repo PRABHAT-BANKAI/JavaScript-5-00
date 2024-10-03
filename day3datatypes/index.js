@@ -23,6 +23,8 @@ let num = 10;
 console.log(typeof typeof num, "number"); //string
 console.log(typeof num); //output number
 
+console.log(  typeof num)
+
 //string
 var string = "asdfg";
 console.log(string);
@@ -43,31 +45,40 @@ console.log(typeof typeof value, "undefined");
 // null
 let value1 = null;
 
-console.log(typeof value1, "null");
+console.log(typeof value1, "null");//object
 
 //bigInt
 let bigNumber = 12312312354336568671233226537n;
-console.log(typeof bigNumber);
-console.log(bigNumber);
+console.log(typeof bigNumber ,"big1");
+console.log(bigNumber,"big");//bigint
 
 //non primative // Reference typed
 
 // object
-let object = { number: 1, string: "hellow" };
+let obje = {}
+let object = { number: 1,
+               string: "hellow",
+              boolean:"12345" };
 console.log(object, "object");
 console.log(typeof object, "object");
 
 // array  multiple variables can store
 
-let array = ["hello", "world", "javscript", string, boolean];
+let array = ["hello", "world", "javscript", string, boolean];//[]
 
 console.log(array, "array");
-console.log(typeof array, "array");
+console.log(typeof array, "array");//object
 
 // function
 function print() {
   console.log("function print");
 }
+function output(){
+  console.log("end")
+
+
+}
+output()
 
 print();
 
@@ -75,12 +86,20 @@ print();
 let nameValue = "prabhat";
 
 nameValue = "prabh";
+console.log(nameValue)
 nameValue = "Raj";
 
 console.log(nameValue);
 
-// const (contant)
+// const (constant)
 const text = "hello";
 
-text = "World"; // const key dont allow update when variable already assigned
+// text = "World"; // const key dont allow update when variable already assigned
 console.log(text);
+
+
+function element()
+{
+  console.log("javascript");
+}
+element();

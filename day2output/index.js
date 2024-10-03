@@ -4,9 +4,9 @@ console.log("hello world!");
 console.log("hello world!");
 console.log("hello world!");
 
-// document.write("<h1>hello world!</h1>");
+// document.write("");
 
-// alert("alert!");
+// alert("alert!");<h1>hello world!</h1>
 
 // let heading = document.getElementById("text");
 // console.log(heading, "heading");
@@ -17,6 +17,13 @@ let gadget = "apple"
 
 var  store = "hello wolrd"
 const name = "bruce"
+
+//strick type and weak type
+
+let string = "hellow"
+string = 123422
+// string = "1243"
+console.log(string)
 
 // let const var 
 hero = "batman"
