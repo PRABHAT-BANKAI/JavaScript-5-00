@@ -24,16 +24,17 @@ console.log(newValue); //output: 10
 console.log(++a); // output 11
 //postfix
 
-let newValue2 = b++;
+b = 4;
+let newValue2 = b++; //4  //b=5
 console.log(newValue2); //output: 4
-console.log(b++); //output 5
+console.log(b++); //output 5  //  b ++=6
 console.log(b); //output 6
 
 console.log(newValue2, b);
 
 // Assignment operators
 
-let c = 10;
+let c = 10; // normal assign
 let num1 = 2;
 num1 += 5; //  num1 = num1 + 5 // output 7
 
@@ -56,24 +57,24 @@ console.log(num1);
 
 // Comparison operators
 
-let num2 = "7";
-let num3 = 7;
-
+let num2 = "7"; //string
+let num3 = 7; // number
+//! not  point
 console.log(num2 == num3); // both are equal or not //output true
-console.log(num2 != num3); //not equal  output true
+console.log(num2 != num3); //not equal  output false
 console.log(num2 > num3); //greater than ouput false
 console.log(num2 < num3); // smaller than ouput false
 console.log(num2 >= num3); //greater than equal output true
 console.log(num2 <= num3); // smaller than equal output true
 
-console.log(num2 === num3, "==="); //false
+console.log(num2 === num3, "==="); //false //strickly
 console.log(num2 !== num3, "!=="); // true
 
 //Logical operators
 // || OR return true value
 // &&  AND return false value
 
-console.log(45 < 87 && 67 > 5 && 5 > 7); //output false
+console.log(45 < 87 && 67 > 5 && 8 > 7); //output false
 console.log(4 > 1 && 0 && 1 && 1); // false = 0
 
 console.log(5 < 1 || 2 || 1 > 12 || 0 || 0 || 2); //output 2
@@ -82,11 +83,12 @@ console.log(5 < 1 || 2 || 1 > 12 || 0 || 0 || 2); //output 2
 // Number
 // String
 // Boolean
-let numStr = "123";
-console.log(typeof numStr);
-let newNUmber = Number(numStr);
 
-console.log(typeof newNUmber);
+let numStr = "123";
+console.log(typeof numStr); //string
+let newNUmber = Number(numStr); //Number()
+
+console.log(typeof newNUmber); //number
 console.log(typeof numStr);
 
 let num4str = "asd";
@@ -94,27 +96,40 @@ let num4str = "asd";
 let newNum4str = Number(num4str);
 console.log(newNum4str, "output"); //NaN not a number
 
-let num5 = false;
-
+let num5 = false; //boolean value true and false
+console.log(typeof typeof typeof num5, "boolean output")// boolean
 let strNum5 = String(num5);
 console.log(strNum5);
-console.log(typeof strNum5);
+console.log(typeof strNum5); // string
 
 let num6 = 0;
 num6 = -1;
-let num6NewValue = Boolean(num6);
+let num6NewValue = Boolean(num6); //false
 
 console.log(num6NewValue);
-console.log(typeof num6NewValue);
+console.log(typeof num6NewValue); // boolean
 
 //implicit and explicit
 
-console.log(false < true);
+console.log(false < true); // true
 
 // concatenate
-console.log(1 + "1" + "23" + 1);
-console.log(5 - "2");
+console.log(1 + 1 + "23" + 1); //11231  //2231
+console.log(5 - "2");// 3
 
 // || && // && is first priority to solve
 console.log(((12 || false) && 5 > 6) || (27 < 0 && 27)); //  12 ||false|| false
 // 12 && false && 27
+
+let valueStr = "asd";
+
+let newNumValue2 = Number(valueStr);
+console.log(newNumValue2); //NaN not a number
+
+
+console.log(12<5 || 5<6 && 23==24 || 76>5 && 0) 
+
+// 12<5 ||false|| 0
+
+console.log(!!!true)
+

@@ -77,3 +77,12 @@ let num4 = 59
 // Math.max
 // Math.random
 // Math.sqrt
+
+console.log((12<5||5) && (0<1) || 55>7  &&  45==65)
+//true && true || 55>7  &&  45==65
+
+//true && true && false
+
+//priority   && have higher priority then  || have priority
+
+//true || false && false

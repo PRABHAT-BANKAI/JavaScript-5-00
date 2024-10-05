@@ -11,10 +11,13 @@
 //bigInt
 
 // non-primitive types (reference types)
-//object
-//array
-
+//object{name:"Prabhat",organization:"full stack"}
+//array [1,2,3,4,4,5,5,6]
 //function
+// print();
+// function print(){
+//   console.log("Hello");
+// }
 
 // primitive types
 //number
@@ -23,7 +26,7 @@ let num = 10;
 console.log(typeof typeof num, "number"); //string
 console.log(typeof num); //output number
 
-console.log(  typeof num)
+console.log(typeof num);
 
 //string
 var string = "asdfg";
@@ -45,40 +48,36 @@ console.log(typeof typeof value, "undefined");
 // null
 let value1 = null;
 
-console.log(typeof value1, "null");//object
+console.log(typeof value1, "null"); //object
 
 //bigInt
 let bigNumber = 12312312354336568671233226537n;
-console.log(typeof bigNumber ,"big1");
-console.log(bigNumber,"big");//bigint
+console.log(typeof bigNumber, "big1");
+console.log(bigNumber, "big"); //bigint
 
 //non primative // Reference typed
 
 // object
-let obje = {}
-let object = { number: 1,
-               string: "hellow",
-              boolean:"12345" };
+let obje = {};
+let object = { number: 1, string: "hellow", boolean: "12345" };
 console.log(object, "object");
 console.log(typeof object, "object");
 
 // array  multiple variables can store
 
-let array = ["hello", "world", "javscript", string, boolean];//[]
+let array = ["hello", "world", "javscript", string, boolean]; //[]
 
 console.log(array, "array");
-console.log(typeof array, "array");//object
+console.log(typeof array, "array"); //object
 
 // function
 function print() {
   console.log("function print");
 }
-function output(){
-  console.log("end")
-
-
+function output() {
+  console.log("end");
 }
-output()
+output();
 
 print();
 
@@ -86,7 +85,7 @@ print();
 let nameValue = "prabhat";
 
 nameValue = "prabh";
-console.log(nameValue)
+console.log(nameValue);
 nameValue = "Raj";
 
 console.log(nameValue);
@@ -97,9 +96,7 @@ const text = "hello";
 // text = "World"; // const key dont allow update when variable already assigned
 console.log(text);
 
-
-function element()
-{
+function element() {
   console.log("javascript");
 }
 element();
