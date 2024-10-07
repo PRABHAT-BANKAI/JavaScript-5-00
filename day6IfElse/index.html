@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>IF else</h1>
+    <p id="text"></p>
+
+    <script>
+      // console.log("hellow");
+
+      // if(condition){} condition true
+
+      // {
+      //   var string = "helo";
+      // }
+      // console.log(string);
+      // var hello = "hellow"
+      // var hello = "asdf"
+      let text = document.getElementById("text"); //[1,2,3,4]
+      text.innerHTML = "hello world";
+
+      if (4 < 5) {
+        console.log("hellow world");
+      }
+
+      let result = 80;
+
+      if (0) {
+        console.log("bike");
+      } else {
+        console.log("Pitai");
+      }
+      let number = 0;
+
+      if (number == 1) {
+        console.log("if");
+      } else {
+        console.log("else");
+      }
+      let string = "Bruce";
+
+      if (string == "Bruce") {
+        //true condition
+        console.log("Batman");
+      } else {
+        console.log("Billioniare");
+      }
+
+      let light = false;
+
+      if ((light = true)) {
+        console.log("Light is on");
+        text.innerText = "Light is on";
+      } else {
+        console.log("Light is off");
+        text.innerText = "Light is oFF";
+      }
+      // console.log(!!!false)
+
+      console.log("end");
+
+      //nested if else
+      let userName = "uperman";
+      let password = "Krypto";
+
+      if (userName == "superman") {
+        if (password == "Krypto") {
+          alert("Welcome Superman");
+        } else {
+          console.log("Invalid Password");
+        }
+      } else {
+        console.log("Invalid UserName");
+      }
+
+      if (userName == "superman" && password == "Krypto") {
+        console.log("Welcome Superman ");
+      } else {
+        console.log("credentials failed");
+      }
+
+      // && ||(22>5 || 56<2 &&!false )
+    </script>
+  </body>
+</html>
