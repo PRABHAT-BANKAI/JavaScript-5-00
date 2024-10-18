@@ -60,14 +60,14 @@ for (let i = array.length - 1; i >= 0; i--) {
   console.log(array[i]);
 }
 
-let num = 5;
+let num = "black";
 switch (num) {
-  case 6:
-    console.log("apple");
+  case "red":
+    console.log("6");
     break;
 
-  case 5:
-    console.log("banana");
+  case "black":
+    console.log("5");
     break;
   default:
     console.log("fruit not found");
@@ -75,3 +75,7 @@ switch (num) {
   // default:
   //   console.log("default");
 }
+
+let num2 = Infinity
+
+console.log(num2>56)
