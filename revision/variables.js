@@ -63,3 +63,34 @@ console.log(number5)
 
 
 console.log(5< 1) //false
+
+// Comparison operators
+// ==  
+// != not equal to
+//===
+// !==
+//  >
+// <
+// >= 
+// <=
+
+console.log(15 == 15 , "comparision")// true
+console.log(15 != 1 , "comparision")// false
+console.log("15" == 15 , "comparision") //true    // implicit   
+console.log("15" === 15 , "comparision")  // false
+console.log("15" !== 15 , "comparision") // true
+
+console.log(5 < 1) //false
+
+console.log(5 >= 1) //false
+
+
+// logical operators
+
+// && and  return false and false value 
+// || or    return true and true value 
+
+
+console.log(56>1 && 55  && 0 && 89 == 89 ,"And operator")
+
+console.log(55<1 || 0 ||0 || 89 != 89|| 0 ,"Or operator")
