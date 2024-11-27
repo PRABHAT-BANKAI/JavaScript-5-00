@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="
+  "
+    >
+      <label for="">UserName</label>
+      <input
+        id="userName"
+        type="text"
+        placeholder="userName"
+        onblur="userNameFun()"
+      />
+      <p id="error1"></p>
+      <label for="">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="password"
+        onblur="passwordFun()"
+      />
+      <p id="error2"></p>
+      <label for="">date</label>
+      <input id="date" type="date" placeholder="date" onblur="dateFun()" />
+      <p id="error3"></p>
+      <label for="">Gender</label>
+      <input
+        id="gender"
+        type="radio"
+        name="gender"
+        value="male"
+        onblur="genderFun()"
+      />
+      male
+      <input
+        type="radio"
+        name="gender"
+        value="female"
+        onblur="genderFun"
+      />female
+      <p id="error4"></p>
+      <input id="button" type="submit" value="submit" />
+    </form>
+
+    <script>
+      function userNameFun() {
+        let userName = document.getElementById("userName");
+        let error1 = document.getElementById("error1");
+        if (userName.value == "") {
+          error1.innerText = "invalid userName";
+          error1.style.color = "red";
+        }
+      }
+
+      function passwordFun() {
+        let password = document.getElementById("password");
+        let error2 = document.getElementById("error2");
+        if (password.value.length < 8) {
+          error2.innerText = "password must be at least 8 characters long";
+          error2.style.color = "red";
+        }
+      }
+      function dateFun() {
+        let date = document.getElementById("date");
+        let error3 = document.getElementById("error3");
+        if (date.value == "") {
+          error3.innerText = "first fill your date";
+          error3.style.color = "red";
+        }
+      }
+      function genderFun() {
+        let gender = document.getElementById("gender");
+        let error4 = document.getElementById("error4");
+        if (gender.value == "") {
+          error4.innerText = "select your gender";
+          error4.style.color = "red";
+        }
+      }
+
+      let button = document.getElementById("button");
+      button.addEventListener("click", submitFun);
+
+      function submitFun(event) {
+        event.preventDefault();
+        let userName = document.getElementById("userName");
+        let password = document.getElementById("password");
+        let date = document.getElementById("date");
+        let gender = document.getElementById("gender");
+        let error1 = document.getElementById("error1");
+        let error2 = document.getElementById("error2");
+        let error3 = document.getElementById("error3");
+        let error4 = document.getElementById("error4");
+        if (userName == "" || password.value.length < 8) {
+          error1.innerText = "invalid userName";
+          error1.style.color = "red";
+          error2.innerText = "invalid password";
+          error2.style.color = "red";
+          return false;
+        }
+
+        alert("login successful!");
+      }
+    </script>
+  </body>
+</html>
