@@ -1,0 +1,41 @@
+<!-- DOM HTML DOM Changed query Selector and querySelectorsAll AddEventListner -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="text"></h2>
+    <h2 id="text"></h2>
+    <h2 id="text"></h2>
+    <h2 id="text"></h2>
+    <h2 id="text"></h2>
+
+    <button>Sum</button>
+    <p id="paragraph"></p>
+
+    <script>
+      // DOM (document object model ) tree  structure
+      // let text = document.querySelector("#text");
+      let text = document.querySelectorAll("#text");
+      console.log(text);
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].innerText = `item ${i}`;
+      }
+
+      let button = document.querySelector("button");
+
+      button.addEventListener("click", function () {
+        let paragraph = document.getElementById("paragraph");
+        let sum = 0;
+        let a = 18;
+        let b = 22;
+        sum = a + b;
+        paragraph.innerText = `The sum of ${a} and ${b} is ${sum}`;
+      });
+    </script>
+  </body>
+</html>
