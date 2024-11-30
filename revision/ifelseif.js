@@ -108,7 +108,8 @@ console.log("12345"+6789)//concatenate // 123456789
 let str = ""
 let count = 0
 for(let i=1;i<=5;i++){
-  str = str+i
+  // str = str+i
+  str += i
   count++
   console.log(count)
 }
@@ -123,3 +124,15 @@ console.log(count)
 //***
 //****
 //*****
+
+
+// output 1 t0 10 total
+
+
+// let and const keyword is a block scope ={}
+for(let i=1;i<=10;i++){
+  let sum = 0
+  sum += i
+  console.log(i,sum)
+}
+
