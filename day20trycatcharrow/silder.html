@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <button id="back">back</button><br />
+    <button id="next">next</button>
+    <script>
+      const heading = document.querySelector("h1");
+      // const backBtn = document.getElementById("back");
+      // const nextBtn = document.getElementById("next");
+      let currentSlide = 0;
+      const slides = ["nodejs", "javascript", "html"];
+
+      setInterval(() => {
+        heading.textContent = slides[currentSlide];
+        console.log(currentSlide);
+        if (currentSlide == slides.length - 1) {
+          currentSlide = 0;
+
+        }else{
+          currentSlide++;
+        }
+      
+      }, 1000);
+
+      // nextBtn.addEventListener("click", function () {
+      //   if (currentSlide < slides.length - 1) {
+      //     heading.textContent = slides[currentSlide];
+
+      //     if (currentSlide == slides.length-1 ) {
+      //       currentSlide = 0;
+      //     }
+      //     currentSlide++;
+      //   }
+      // });
+    </script>
+  </body>
+</html>
