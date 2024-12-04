@@ -130,7 +130,7 @@ console.log(count)
 
 
 // let and const keyword is a block scope ={}
-for(let i=1;i<=10;i++){
+for(let i=1;i<=5;i++){
   let sum = 0
   sum += i
   console.log(i,sum)
