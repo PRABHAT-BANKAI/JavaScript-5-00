@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="section-info"></div>
+    <div class="section-info"></div>
+    <div class="section-info"></div>
+    <script>
+      let card = document.querySelectorAll(".section-info");
+      console.log(card);
+// ["javascript", "css","html"]
+      card.forEach((section) => {
+        section.innerHTML = "<h1>Information Updated</h1>";
+      });
+    </script>
+  </body>
+</html>

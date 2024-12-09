@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>form validation</h1>
+    <form action="">
+      Name
+      <input
+        id="userName"
+        type="text"
+        placeholder="enter User Name"
+        onblur="emailValidation()"
+      />
+      <p id="error1"></p>
+      <br />
+      Email
+      <input id="email" type="email" placeholder="enter Email" />
+      <p id="error2"></p>
+      <br />
+      <button>Sumbit</button>
+    </form>
+
+    <script>
+      function emailValidation() {
+        let email = document.getElementById("userName").value;
+        let error1 = document.getElementById("error1");
+        console.log(email, "email");
+        if (email == "") {
+          error1.innerText = "please field this user name";
+          error1.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

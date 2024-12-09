@@ -1,0 +1,43 @@
+<!-- DOM HTML DOM Changed query Selector and querySelectorsAll AddEventListner -->
+
+<!-- what is dom  : (document object model) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="head">hello from head</h1>
+    <p id="para" class="par">hello from paragraph tag</p>
+
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+
+    <button id="btn">click me</button>
+
+    <script>
+      let head = document.getElementById("head");
+      head.textContent = "Hello from JavaScript";
+      console.log(head.textContent);
+
+      let para = document.querySelector("#para");
+      console.log(para);
+      let head2 = document.querySelectorAll("h2");
+      console.log(head2);
+
+      head2.forEach((element, index) => {
+        element.innerText = `item ${index}`;
+      });
+
+      let btn = document.getElementById("btn");
+      // console.log(btn[0].textContent);
+    //  window.addEventListener("load", () => {
+    //     console.log("button clicked");
+    //   });
+    </script>
+  </body>
+</html>
