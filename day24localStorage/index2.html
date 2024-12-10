@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+
+  <script>
+    const getName = localStorage.getItem("game")
+    const heading = document.querySelector("h1")
+    heading.innerText = getName
+  </script>
+</body>
+</html>

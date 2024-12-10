@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./index2.html">Index2</a>
+    <h1>local storage session storage cookies</h1>
+    <p class="name"></p>
+    <button id="btn">show game name</button>
+    <button class="clear">localStorage clear</button>
+    <script>
+      localStorage.setItem("games", "pubg");
+      let name = document.querySelector(".name");
+      const btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", show);
+
+      function show() {
+    
+        let gameName = localStorage.getItem("game");
+        name.innerText = gameName;
+      }
+
+
+      let clearBtn = document.querySelector(".clear");
+      clearBtn.addEventListener("click", ()=>{
+        // localStorage.removeItem("gamesports");
+        // localStorage.clear()
+      });
+      show()
+    </script>
+  </body>
+</html>
