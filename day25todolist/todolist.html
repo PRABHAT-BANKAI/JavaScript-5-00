@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .card {
+        display: flex;
+        width: 300px;
+        border: 1px solid black;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .card p {
+        font-size: 25px;
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <h1>TodList</h1>
     <input id="todoInput" type="text" />
     <button id="addBtn">Add todolist</button>
 
-    <div></div>
+    <div id="container"></div>
     <script src="/todo.js"></script>
   </body>
 </html>
