@@ -26,17 +26,29 @@ function showData() {
     deleteBtn.textContent = "Delete";
     console.log(index);
     deleteBtn.addEventListener("click", () => {
-      const filterData = array.filter((element, i) => {
+      array = array.filter((element, i) => {
         return i != index;
       });
 
-      localStorage.setItem("todolist", JSON.stringify(filterData));
+      localStorage.setItem("todolist", JSON.stringify(array));
       showData();
     });
     let editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
+    editBtn.addEventListener("click", () => {
+      array.forEach((element, i) => {
+        if (i == index) {
+          let newInput = prompt(element);
+
+          array[index] = newInput
+          localStorage.setItem("todolist", JSON.stringify(array))
+          showData();
+        }
+      });
+    });
+
     para.textContent = element;
-    card.append(para, deleteBtn,editBtn);
+    card.append(para, deleteBtn, editBtn);
     container.append(card);
   });
 }
