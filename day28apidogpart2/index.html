@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>api with name</h1>
+    <input id="text" type="text" />
+    <button id="search">search</button>
+    <img id="image" src="" alt="" height="200px" />
+    <script>
+      let text = document.getElementById("text");
+      let search = document.getElementById("search");
+      let image = document.getElementById("image");
+      function fetchShow() {
+        fetch("https://dog.ceo/api/breed/husky/images/random")
+          .then((res) => {
+            return res.json();
+          })
+          .then((res) => {
+            image.src = res.message;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+
+      search.addEventListener("click", () => {
+        fetch(`https://dog.ceo/api/breed/${text.value}/images/random`)
+          .then((res) => {
+            return res.json();
+          })
+          .then((res) => {
+            image.src = res.message;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        text.value = ""; // reset input field after search
+      });
+
+      fetchShow();
+    </script>
+  </body>
+</html>
